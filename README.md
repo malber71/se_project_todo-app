@@ -20,4 +20,6 @@ This project refactored the original javascript to use object classes.
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [Deployment link][project-page]
+
+[project-page]: https://github.com/malber71/se_project_todo-app
