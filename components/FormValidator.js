@@ -1,17 +1,13 @@
 class FormValidator {
   constructor(settings, formEl) {
-    this._settings = settings;
+    // this._settings = settings;
     this._inputSelector = settings.inputSelector;
     this._submitButtonSelector = settings.submitButtonSelector;
     this._errorClass = settings.errorClass;
     this._inputErrorClass = settings.inputErrorClass;
     this._inactiveButtonClass = settings.inactiveButtonClass;
     this._formEl = formEl;
-    console.log(settings);
-    console.log(formEl);
   }
-
-  // TODO - finish hideInputError and showInputError methods and check in browser for functionality
 
   _showInputError = (inputElement, errorMessage) => {
     const errorElementId = `#${inputElement.id}-error`;
@@ -76,6 +72,12 @@ class FormValidator {
       evt.preventDefault();
     });
     this._setEventListeners();
+  }
+
+  resetValidation() {
+    this._formEl.reset();
+    this._buttonElement.classList.add(this._inactiveButtonClass);
+    this._buttonElement.disabled = true;
   }
 }
 
